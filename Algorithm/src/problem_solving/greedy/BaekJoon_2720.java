@@ -3,7 +3,7 @@ package problem_solving.greedy;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MakingBigNumbers {
+public class BaekJoon_2720 {
 
 	public static void main(String[] args) {
 //		String number = "4177252841";
