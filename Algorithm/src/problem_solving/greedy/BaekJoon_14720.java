@@ -15,22 +15,31 @@ public class BaekJoon_14720 {
 
 		int cnt = 0 ;
 		int [] storeArr = new int [N];
-		String sol = "012";
-		String s= "";
 		for(int i = 0; i <N ; i++) {
-			s+= sc.next();
+			storeArr[i] = Integer.parseInt( sc.next() );
 		}
-		
-		int len = s.length();
-		while(len >= 3) {
-			s = s.replaceFirst(sol, "");
-			if( len != s.length()) {
+		int next = 0 ;
+		for(int i = 0 ; i < storeArr.length ; i++) {
+			
+			if( storeArr[i] == 2 && next == 2) {
 				cnt++;
-				len = s.length();
+				next = 0;
+				continue;
+			}
+			if( storeArr[i] == 1 && next == 1) {
+				cnt++ ;
+				next=2;
+				continue;
+			}
+			if( storeArr[i] == 0 && next == 0) {
+				cnt++;
+				next =1 ;
+				continue;
 			}
 		}
 		
 		
+		System.out.print(cnt);
 			
 	}
 
