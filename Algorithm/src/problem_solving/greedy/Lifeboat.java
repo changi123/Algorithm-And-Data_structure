@@ -19,10 +19,14 @@ public class Lifeboat {
 	// 구명보트
     public static int solution(int[] people, int limit) {
         int answer = 0;
-        Arrays.sort(people);
         
+        
+
+        Arrays.sort(people);
+
+      
         for(int i = 0; i < people.length ; i ++) {
-//        	int max = people [people.length-i-1];
+        	int max = people [people.length-i-1];
         	
         	
         	for(int j = 0 ; j < people.length;j++) {
