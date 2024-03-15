@@ -8,10 +8,9 @@ public class BaekJoon_13305 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc= new Scanner(System.in);
-		
-		int N = Integer.parseInt(sc.next());
-		int [] a = new int[N-1];
-		int [] b = new int[N];
+		long N = Long.parseLong(sc.next());
+		long [] a = new long[(int) (N-1)];
+		long [] b = new long[(int) N];
 		
 		
 		for(int i= 0 ; i <a.length ; i++) {
@@ -20,24 +19,51 @@ public class BaekJoon_13305 {
 		for(int i= 0 ; i <b.length ; i++) {
 			b[i] = Integer.parseInt(sc.next());
 		}
-		
-		System.out.println(Arrays.toString(a));
-		System.out.println(Arrays.toString(b));
-		int price= 0 ;
-		for(int i= 0 ; i <a.length ; i++) {
-//			if( i == a.length -1) {
-//				break;
-//			}
-			int num = a[i] ;
-			int sum = 0 ;
-			for(int j = i+1 ; j < a.length ; j++) {
-				sum+= a[j];
+		long min = b[0] ;
+		long sum = 0 ;
+		for(int i= 0 ; i < b.length ; i++) {
+			if( i == b.length -1) {
+				break;
 			}
-			if( sum > num) {
-				price+= a[i]*b[i];
+			if( min <=b[i]) {
+				sum+=a[i]*min;
+			}else {
+				min = b[i];
+				sum+=a[i]*min;
 			}
 		}
-		System.out.println(price);
+		
+		System.out.println(sum);
+
+		
+		
+		
+//		int N = Integer.parseInt(sc.next());
+//		int [] a = new int[N-1];
+//		int [] b = new int[N];
+//		
+//		
+//		for(int i= 0 ; i <a.length ; i++) {
+//			a[i] = Integer.parseInt(sc.next());
+//		}
+//		for(int i= 0 ; i <b.length ; i++) {
+//			b[i] = Integer.parseInt(sc.next());
+//		}
+//		int min = b[0] ;
+//		int sum = 0 ;
+//		for(int i= 0 ; i < b.length ; i++) {
+//			if( i == b.length -1) {
+//				break;
+//			}
+//			if( min <=b[i]) {
+//				sum+=a[i]*min;
+//			}else {
+//				min = b[i];
+//				sum+=a[i]*min;
+//			}
+//		}
+//		
+//		System.out.println(sum);
 		
 	}
 
