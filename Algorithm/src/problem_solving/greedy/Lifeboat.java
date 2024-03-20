@@ -1,14 +1,16 @@
 package problem_solving.greedy;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Lifeboat {
 
 	public static void main(String[] args) {
 	
-//		int [] people = {70, 50, 80, 50};
-		int [] people = {70, 80, 50};
+		int [] people = {10,20,30,40};
+//		int [] people = {70, 80, 50};
+//		int [] people = {70, 80, 50,50};
 		int limit =  100;
 		
 		System.out.println(solution(people, limit));
@@ -18,33 +20,29 @@ public class Lifeboat {
 	}
 	// 구명보트
     public static int solution(int[] people, int limit) {
-        int answer = 0;
-        
-        
+    	  int answer = 0;
+          
+          int minIndex = 0;
+          int maxIndex = people.length-1;
 
-        Arrays.sort(people);
-
-      
-        for(int i = 0; i < people.length ; i ++) {
-        	int max = people [people.length-i-1];
-        	
-        	
-        	for(int j = 0 ; j < people.length;j++) {
-        	
-        		if(  people [people.length-i-1] + people[j] <= limit) {
-        			answer++;
-        			people [people.length-i-1] = limit+1;
-        			people[j] = limit+1;
-        		}
-        			
-        	}
-        	if( people [people.length-i-1]  <=limit) {
-        		answer++;
-        	}
-        	
-        	
-        }
-        return answer;
+          Arrays.sort(people);
+   
+          int cnt = 0 ;
+          int min = people[0];
+          for(int i= 0 ; i < people.length;i++) {
+        		  if( people[minIndex] + people[maxIndex]<=limit) {
+        			  cnt++;
+        			  people[minIndex++] = limit+1;
+        			  people[maxIndex--] = limit+1;
+        		  } else if(people[maxIndex]<=limit ){
+        			  people[maxIndex--] = limit+1;
+        			  cnt++;
+        		  }
+        
+          }
+          
+          
+          return cnt;
     }
 
 }
