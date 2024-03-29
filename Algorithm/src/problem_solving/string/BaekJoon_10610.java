@@ -1,6 +1,7 @@
 package problem_solving.string;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -8,34 +9,39 @@ public class BaekJoon_10610 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String s= sc.next();
-		String [] arr = s.split("");
-//		int [] arrNum = new int[arr.length];
-		ArrayList<Long> list= new ArrayList();
-		for(int i= 0 ; i < arr.length ; i++) {
-			list.add( Long.parseLong(arr[i]));
+		StringBuilder s= new StringBuilder( sc.next());
+		
+		String [] arr = s.toString().split("");
+		Long [] arrLong = new Long [arr.length] ;
+		Long l = (long) 0 ; 
+		for(int i= 0 ; i < arr.length ; i ++) {
+			l+= Long.parseLong(arr[i]);
+			arrLong[i] = Long.parseLong(arr[i]);
 		}
 		
-		list.sort(Collections.reverseOrder());
+		
+		Arrays.sort(arrLong);
+		
 		StringBuilder sb = new StringBuilder();
-		for(int i=  0 ; i <list.size(); i++) {
-			sb.append(Long.toString(list.get(i)));
+		
+		for(int i = arrLong.length-1 ; i>=0 ; i--) {
+			sb.append(Long.toString(arrLong[i]));
 		}
 		
-		Long n = Long.parseLong(sb.toString());
-		while(true) {
-			if( n <30 ) {
-				System.out.println(-1);
-				break;
-			}
-			if( n % 30== 0) {
-				System.out.println(n);
-				break;
-			}else {
-				n = n / 10;
-			}
+		
+		if( l % 3 == 0 && sb.charAt(sb.length()-1) == '0') {
+			System.out.println(sb.toString());
+		}else {
+			System.out.println(-1);
 		}
+		
+		
+		
+
+		
 
 	}
+	
+
 
 }
