@@ -27,6 +27,7 @@ Scanner sc = new Scanner(System.in);
 			}
 			for(int j = arr.length-1-i ; j > i ; j--) {
 				
+				
 				if( arr[i] + arr[j] == sum) {
 					set.add(arr[i]);
 					set.add(arr[j]);
