@@ -1,4 +1,4 @@
-package data_structure;
+package data_structure.basic_7;
 
 public class Linked_list {
 
