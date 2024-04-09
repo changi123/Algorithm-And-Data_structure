@@ -27,6 +27,7 @@ public class Stack {
 				ㄴ 실행 취소
 				ㄴ 재귀
 			
+			
 		 	
 		 
 		 */
