@@ -1,4 +1,4 @@
-package Data_structure;
+package data_structure;
 
 public class Stack {
 
