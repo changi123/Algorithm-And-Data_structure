@@ -11,7 +11,7 @@ public class Time_Complexity {
 		  	  오름차순 정렬 시 최악의 상황일 때 걸리는 시간을 이용해 나타내는 것
 		*/
 		
-		
+		 
 		/*
 		  (2) O(n)
 		   	  ㄴ Linear Time (선형) 
