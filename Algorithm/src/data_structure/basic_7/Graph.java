@@ -8,7 +8,7 @@ public class Graph {
 		 	(1) 그래프는 단순히 nodes/vertices(노드) 사이에 edge가 있는 Collection이다
 		 	(2) 그래프는 directed(방향) 또는 undirected(무방향)이 될 수 있다.
 		 	
-		 	
+		 	 
 		 	트리(Tree)
 		 	(1) 노드들로 구성되어 있다
 		 	(2) 트리 최상단에 있는 노드를 root라고 한다
