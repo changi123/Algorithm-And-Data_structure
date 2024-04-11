@@ -27,6 +27,7 @@ public class BaekJoon_3273 {
 				if( arr[i] + arr[j] == sum) {
 					cnt++;
 					break;
+					
 				}
 			}
 		}
