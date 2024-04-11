@@ -9,6 +9,7 @@ public class BaekJoon_1388 {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
+		
 		int n = Integer.parseInt(sc.next());
 		int m = Integer.parseInt(sc.next());
 		
