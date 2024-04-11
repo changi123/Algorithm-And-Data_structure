@@ -1,5 +1,6 @@
 package problem_solving.sort;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BaekJoon_1431 {
@@ -17,8 +18,8 @@ public class BaekJoon_1431 {
 			arr[i] = sc.next();
 		}
 		
-		
-		
+		Arrays.sort(arr);
+		Arrays.sort(arr, (a1,a2)-> a1.length() );
 		
 	}
 
