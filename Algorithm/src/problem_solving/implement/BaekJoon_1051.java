@@ -17,7 +17,7 @@ public class BaekJoon_1051 {
 
 		int [][] arr = new int[n][m];
 
-		for(int i= 0 ; i < n ; i++) {
+		for(int i= 0 ; i < n ; i++) { 
 			String s = sc.next();
 			String [] sr = s.split("");
 
