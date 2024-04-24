@@ -25,31 +25,27 @@ public class BaekJoon_1049 {
 		Arrays.sort(packPrice);
 		Arrays.sort(onePrice);
 		
-		
+//		System.out.println(Arrays.toString(packPrice));
+//		System.out.println(Arrays.toString(onePrice));
 
-		
-		sum = ( n / 6 ) * packPrice[0];
-		
-		if( n % 6 == 0) {
-			if( packPrice[0]*(n/6) > onePrice[0]*n) {
-				System.out.println(onePrice[0]*n );
-			}else {
-				System.out.println( packPrice[0]*(n/6));
+		int cnt = 0 ;
+		if( onePrice[0]*6 > packPrice[0]) {
+			while( n>6 ) {
+				n -= 6; 
+				cnt++;
 			}
+			sum+=packPrice[0]*cnt;
+			int min = Math.min(packPrice[0], onePrice[0]*n);
+			
+			sum+=min;
+			System.out.println(sum);
+			return ;
+			
+		}else {
+			sum+=n*onePrice[0];
+			System.out.println(sum);
 			return ;
 		}
-
-		
-		int num = n % 6 ;
-		
-		if( num*onePrice[0] > packPrice[0] ) {
-			sum+=packPrice[0];
-		}else {
-			sum+=onePrice[0]*num;
-		}
-		
-		
-		System.out.println(sum);
 		
 		
 		
