@@ -19,7 +19,7 @@ public class BaekJoon_19941 {
 			}
 
 		}
-		System.out.println(Arrays.toString(arr));
+//		System.out.println(Arrays.toString(arr));
 		System.out.println(cnt);
 
 	}
