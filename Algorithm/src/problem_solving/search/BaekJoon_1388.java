@@ -1,4 +1,4 @@
-package problem_solving.graphSearch;
+package problem_solving.search;
 
 import java.util.Arrays;
 import java.util.Scanner;

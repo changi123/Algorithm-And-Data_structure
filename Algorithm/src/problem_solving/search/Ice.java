@@ -1,4 +1,4 @@
-package problem_solving.dfs_bfs;
+package problem_solving.search;
 
 import java.util.Arrays;
 import java.util.Scanner;
