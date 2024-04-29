@@ -30,6 +30,7 @@ public class BaekJoon_2606 {
 		}
 		dfs(0);
 
+		
 
 	}
 
