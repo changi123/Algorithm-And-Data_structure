@@ -1,58 +1,78 @@
 package problem_solving.search;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
 public class BaekJoon_2606 {
+
+	static boolean[] check;
+	static int [][] arr ;
+	static int cnt =0;
+	static int n =0;
+	static int m =0;
 	
 	public static void main(String[] args) {
+
 		Scanner sc = new Scanner(System.in);
-		int n = Integer.parseInt(sc.next());
-		int cou = Integer.parseInt(sc.next());
-		int [][] arr = new int[cou][2];
-		
-		boolean[] check = new boolean[n+1];
+		n = Integer.parseInt(sc.next());
+		m = Integer.parseInt(sc.next());
+		check = new boolean[n+2];
+		arr = new int[m][2];
 		for(int i= 0 ; i < arr.length;i++) {
-			for(int j = 0 ; j < arr[0].length;j++) {
+			for(int j = 0 ; j  < arr[i].length;j++) {
 				arr[i][j] = Integer.parseInt(sc.next());
 			}
 		}
-		check[0] = true;
-		for(int i = 0 ; i  <cou ; i++) {
-			
-			if( arr[i][0] == 1) {
-				check[arr[i][1]] =true;
-				continue;
-			}
-			
-			if( check[arr[i][1]] == true) {
-				check[arr[i][0]] = true;
-				continue;
-			}
-			if( check[arr[i][0]] == true) {
-				check[arr[i][1]] = true;
-				continue;
-			}
-			
-			if( arr[i][1] == 1) {
-				check[arr[i][0]] =true;
-				arr[i][1] = 0 ;
-				i = 0;
-				continue;
-			}
 		
-	
+		if( n == 1 ) {
+			System.out.println(0);
+			return ;
 		}
-		int cnt = 0 ;
-		for(int i= 0 ; i < check.length; i++) {
-			if (check[i] == true) {
-				cnt++;
-			}
-		}
+		dfs(0);
 
-		System.out.println(cnt-1);
+
 	}
 
+	public static void dfs(int a) {
+		cnt++;
+		
+		if(cnt == n*100) {
+			System.out.println(trueCheck()-1);
+			System.exit(0);
+		}
+		int answer = trueCheck();
+		if( arr[a][0] == 1) {
+			check[ arr[a][0] ] = true;
+			check[ arr[a][1] ] = true;
+		}else if( arr[a][1] == 1) {
+			check[ arr[a][0] ] = true;
+			check[ arr[a][1] ] = true;
+		} else if(	check[ arr[a][0] ] == true ) {
+			check[ arr[a][1] ] = true;
+		}else if( check[ arr[a][1] ] == true) {
+			check[ arr[a][0] ] = true;
+		}
+		
+
+		if( a == arr.length-1) {
+			a= 0 ;
+			
+			dfs(a);
+			
+		}else {
+			dfs(++a);
+		}
+		
+		
+	}
+
+	public static int trueCheck() {
+		int t = 0 ;
+		for(int i = 0 ; i < check.length;i++) {
+			if( check[i] == true) {
+				t++;
+			}
+		}
+		return t;
+	}
 }
