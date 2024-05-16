@@ -24,9 +24,7 @@ public class BaekJoon_11000 {
 		int cnt =0 ;
 		Queue<Integer> q = new LinkedList<Integer>();
 
-		while(true) {
-			
-		}
+		
 		
 		
 //		System.out.println(Arrays.deepToString(arr));
