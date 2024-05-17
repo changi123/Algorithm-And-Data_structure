@@ -1,8 +1,8 @@
 package problem_solving.greedy;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class BaekJoon_11000 {
@@ -20,10 +20,28 @@ public class BaekJoon_11000 {
 			}
 		}
 		
-		Arrays.sort(arr,(a1,a2)->a1[0]-a2[0]);
-		int cnt =0 ;
-		Queue<Integer> q = new LinkedList<Integer>();
-
+		Arrays.sort(arr,new Comparator<int[]>() {
+			public int compare(int[] o1 , int[] o2) {
+				if( o1[0] == o2[0]) {
+					return o1[1] - o2[1];
+				}else {
+					return o1[0]-o2[0];
+				}
+			}
+		});
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<>();
+		pq.add(arr[0][1]);
+		
+		for(int i= 1 ; i < n ;i++ ) {
+			if( pq.peek() <= arr[i][0] ) {
+				pq.poll();
+			}
+			
+			pq.add(arr[i][1]);
+		}
+		System.out.println(pq.size());
+		
 		
 		
 		
