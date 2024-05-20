@@ -24,7 +24,6 @@ public class BaekJoon_2164 {
 			
 		}
 
-
 		System.out.println(q.peek());
 
 	}
