@@ -14,7 +14,6 @@ public class BaekJoon_17608 {
 			st.push(num);
 		}
 		int cnt = 0 ;
-//		System.out.println(st.toString());
 		int last = st.pop();
 		int temp = last ;
 		int i= 0 ;
