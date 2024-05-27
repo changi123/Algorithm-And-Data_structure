@@ -17,6 +17,7 @@ public class BaekJoon_12904 {
 			if( makeSb.toString().equals(sb.toString())) {
 				System.out.println(1);
 				return ;
+				
 			}
 			
 			if( makeSb.charAt(makeSb.length()-1) == 'A') {
