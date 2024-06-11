@@ -17,12 +17,12 @@ public class BaekJoon_2960 {
 		int cnt = 0 ; 
 		
 		
-		int i = 1 ; //  곱하는 수
+		int i = 1 ; 
 		
 		
-		int num = 2; // 처음 가장 작은 수 
+		int num = 2;  
 		
-		int index = num ; // 지울 인덱스
+		int index = num ;
 		
 		while(true) {
 		
