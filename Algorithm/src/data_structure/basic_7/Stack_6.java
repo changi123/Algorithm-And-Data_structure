@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Stack {
+public class Stack_6 {
 
 	public static void main(String[] args) {
 		/*

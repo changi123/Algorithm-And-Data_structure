@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Array {
+public class Array_1 {
 
 	public static void main(String[] args) {
 		/*

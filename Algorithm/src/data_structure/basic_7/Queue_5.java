@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Queue {
+public class Queue_5 {
 
 	public static void main(String[] args) {
 		/*

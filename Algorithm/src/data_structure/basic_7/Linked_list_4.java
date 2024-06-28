@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Linked_list {
+public class Linked_list_4 {
 
 	public static void main(String[] args) {
 		/*

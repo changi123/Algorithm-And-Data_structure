@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Hash {
+public class Hash_3 {
 
 	public static void main(String[] args) {
 		/*

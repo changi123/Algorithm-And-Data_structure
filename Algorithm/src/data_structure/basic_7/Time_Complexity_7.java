@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Time_Complexity {
+public class Time_Complexity_7 {
 	public static void main(String[] args) {
 		/*
 		  시간복잡도

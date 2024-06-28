@@ -1,6 +1,6 @@
 package data_structure.basic_7;
 
-public class Graph {
+public class Graph_2 {
 
 	public static void main(String[] args) {
 		/*
