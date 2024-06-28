@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import data_structure.basic_7.Linked_list;
 
 public class Programmers_42746 {
 
