@@ -19,8 +19,8 @@ public class BaekJoon_13417 {
 			dq.addFirst(sc.next());
 			StringBuilder sb = new StringBuilder();
 			for(int i = 1 ; i < n ; i++) {
-				String s = sc.next(); //k
-				String compare = dq.peek(); //m
+				String s = sc.next(); 
+				String compare = dq.peek(); 
 				if(compare.compareTo(s) < 0 ) {
 					dq.addLast(s);
 				}else {
