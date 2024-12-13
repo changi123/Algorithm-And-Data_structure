@@ -14,7 +14,7 @@ import java.util.TreeMap;
 public class BaekJoon_7662 {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 선언		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 	
 		Integer t = Integer.parseInt(br.readLine());
 		while(t-- > 0 ) {
 			StringBuilder sb = new StringBuilder();
