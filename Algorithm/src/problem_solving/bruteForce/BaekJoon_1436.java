@@ -1,4 +1,4 @@
-package problem_solving.BruteForce;
+package problem_solving.bruteForce;
 
 import java.util.Scanner;
 
