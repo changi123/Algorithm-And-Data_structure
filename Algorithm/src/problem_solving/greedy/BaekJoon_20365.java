@@ -8,6 +8,7 @@ public class BaekJoon_20365 {
 
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
+		int n = Integer.parseInt(sc.next());
 		String s = sc.next();
 		int rCnt = 0 ; 
 		int bCnt = 0 ;
